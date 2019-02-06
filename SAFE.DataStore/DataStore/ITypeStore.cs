@@ -2,7 +2,7 @@
 
 namespace SAFE.DataStore
 {
-    public interface ITypeStore
+    internal interface ITypeStore
     {
         Task AddAsync(string type, MdLocator location);
 

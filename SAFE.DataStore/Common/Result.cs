@@ -1,6 +1,6 @@
 ﻿namespace SAFE.DataStore
 {
-    public static class Result
+    internal static class Result
     {
         public static Result<T> OK<T>(T value)
         {
@@ -32,71 +32,71 @@
         }
     }
 
-    #pragma warning disable SA1502 // Element should not be on a single line
-    public class KeyNotFound<T> : Result<T>
+#pragma warning disable SA1502 // Element should not be on a single line
+    internal class KeyNotFound<T> : Result<T>
     {
         public KeyNotFound(string info = null)
             : base(default(T), false, ErrorCodes.KEY_NOT_FOUND, $"Key not found! {info}")
         { }
     }
 
-    public class ValueDeleted<T> : Result<T>
+    internal class ValueDeleted<T> : Result<T>
     {
         public ValueDeleted(string info = null)
             : base(default(T), false, ErrorCodes.VALUE_DELETED, $"Value deleted! {info}")
         { }
     }
 
-    public class ValueAlreadyExists<T> : Result<T>
+    internal class ValueAlreadyExists<T> : Result<T>
     {
         public ValueAlreadyExists(string info = null)
             : base(default(T), false, ErrorCodes.VALUE_ALREADY_EXISTS, $"Value already exists! {info}")
         { }
     }
 
-    public class VersionMismatch<T> : Result<T>
+    internal class VersionMismatch<T> : Result<T>
     {
         public VersionMismatch(string info = null)
             : base(default(T), false, ErrorCodes.VERSION_EXCEPTION, $"Version mismatch! {info}")
         { }
     }
 
-    public class DeserializationError<T> : Result<T>
+    internal class DeserializationError<T> : Result<T>
     {
         public DeserializationError(string info = null)
             : base(default(T), false, ErrorCodes.DESERIALIZATION_ERROR, $"Deserialization error! {info}")
         { }
     }
 
-    public class MdOutOfEntriesError<T> : Result<T>
+    internal class MdOutOfEntriesError<T> : Result<T>
     {
         public MdOutOfEntriesError(string info = null)
             : base(default(T), false, ErrorCodes.MD_OUT_OF_ENTRIES, $"Md has no more entries! {info}")
         { }
     }
 
-    public class ArgumentOutOfRange<T> : Result<T>
+    internal class ArgumentOutOfRange<T> : Result<T>
     {
         public ArgumentOutOfRange(string info = null)
             : base(default(T), false, ErrorCodes.ARGUMENT_OUT_OF_RANGE, $"Argument out of range! {info}")
         { }
     }
 
-    public class MultipleResults<T> : Result<T>
+    internal class MultipleResults<T> : Result<T>
     {
         public MultipleResults(string info = null)
             : base(default(T), false, ErrorCodes.MULTIPLE_RESULTS, $"Multiple results! {info}")
         { }
     }
 
-    public class InvalidOperation<T> : Result<T>
+    internal class InvalidOperation<T> : Result<T>
     {
         public InvalidOperation(string info = null)
             : base(default(T), false, ErrorCodes.MULTIPLE_RESULTS, $"Invalid operation! {info}")
         { }
     }
 
-    public class DataNotFound<T> : Result<T>
+    internal class DataNotFound<T> : Result<T>
     {
         public DataNotFound(string info = null)
             : base(default(T), false, ErrorCodes.DATA_NOT_FOUND, $"Data not found! {info}")

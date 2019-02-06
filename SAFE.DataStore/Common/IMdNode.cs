@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace SAFE.DataStore
 {
-    public interface IMdNode
+    internal interface IMdNode
     {
         int Count { get; }
 

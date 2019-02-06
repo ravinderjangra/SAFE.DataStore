@@ -4,13 +4,10 @@ using System.Text;
 
 namespace SAFE.DataStore.Data
 {
-    public static class Partitioner
+    internal static class Partitioner
     {
         private const long V = 2862933555777941757;
 
-        /// <summary>
-        ///
-        /// </summary>
         /// <param name="value">The value for which we calculate the correct partition, out of the available count of partitions.</param>
         /// <param name="availableCount">Must be a number larger than 0</param>
         /// <returns>Minimum value returned is 0.</returns>
@@ -48,13 +45,6 @@ namespace SAFE.DataStore.Data
                 throw new ArgumentOutOfRangeException("Must have at least one available partition");
         }
 
-        /* [Obsolete]
-        int GetShard(Guid guid)
-        {
-            ulong hash = GetKey(guid);
-            return JumpConsistentHash(hash, PartitionConstants.Partitions);
-        } */
-
         static ulong GetKey(string value)
         {
             return Hash(Encoding.UTF8.GetBytes(value));
@@ -68,7 +58,6 @@ namespace SAFE.DataStore.Data
         static ulong Hash(byte[] bytes)
         {
             return HashFNV1a(bytes);
-            /* return ToLong(fn1va); */
         }
 
         static int JumpConsistentHash(ulong key, int buckets)
@@ -90,15 +79,6 @@ namespace SAFE.DataStore.Data
 
             return (int)b;
         }
-
-        /* [Obsolete]
-        long ToLong(ulong lon)
-        {
-            if (lon <= long.MaxValue)
-                return (long)lon;
-            var diff = lon - long.MaxValue;
-            return long.MaxValue - (long)diff;
-        } */
 
         // FNV-1a (64-bit) non-cryptographic hash function.
         // Adapted from: http://github.com/jakedouglas/fnv-java

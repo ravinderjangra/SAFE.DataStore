@@ -8,7 +8,7 @@ namespace SAFE.DataStore
     // This is the only in-memory mock in the project.
     // To connect to SAFENetwork (mock/local/alpha-2), implement the IMd interface
     // with connections via Maidsafe's SafeApp library.
-    public class InMemoryMd : IMdNode
+    internal class InMemoryMd : IMdNode
     {
         static Dictionary<string, IMdNode> _allMds = new Dictionary<string, IMdNode>();
 

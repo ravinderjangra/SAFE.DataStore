@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace SAFE.DataStore
 {
-    public interface IIndexer
+    internal interface IIndexer
     {
         Task CreateIndexAsync<T>(string[] propertyPath, IEnumerable<(Pointer, StoredValue)> pointerValues);
 

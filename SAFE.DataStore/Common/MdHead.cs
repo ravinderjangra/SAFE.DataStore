@@ -1,6 +1,6 @@
 ﻿namespace SAFE.DataStore
 {
-    public class MdHead
+    internal class MdHead
     {
         public MdHead(IMdNode md, string id)
         {

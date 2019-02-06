@@ -1,6 +1,6 @@
 ﻿namespace SAFE.DataStore
 {
-    public static class ErrorCodes
+    internal static class ErrorCodes
     {
         #pragma warning disable SA1310 // Field names should not contain underscore
         public const int KEY_NOT_FOUND = -1;

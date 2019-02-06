@@ -7,7 +7,6 @@ using SafeApp.Misc;
 using SafeApp.Utilities;
 
 [assembly: InternalsVisibleTo("SAFE.DataStore.Tests")]
-[assembly: InternalsVisibleTo("SAFE.DataStore.Client")]
 
 namespace SAFE.DataStore.Network
 {

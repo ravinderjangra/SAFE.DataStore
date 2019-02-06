@@ -6,7 +6,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace SAFE.DataStore
 {
-    public static class Serializer
+    internal static class Serializer
     {
         static JsonSerializerSettings _serializerSettings;
 
@@ -127,7 +127,7 @@ namespace SAFE.DataStore
     }
 
     // http://stackoverflow.com/questions/4066947/private-setters-in-json-net
-    public class PrivateMemberContractResolver : DefaultContractResolver
+    internal class PrivateMemberContractResolver : DefaultContractResolver
     {
         protected override JsonProperty CreateProperty(
             MemberInfo member,
