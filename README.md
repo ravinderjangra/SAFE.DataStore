@@ -1,4 +1,4 @@
-# SAFE-DataStore
+# SAFE.DataStore
 
 This repository contains source code for the SAFE.DataStore library (netcore 2.2, C# 7.3).
 
