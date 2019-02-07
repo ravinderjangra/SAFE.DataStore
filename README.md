@@ -1,12 +1,12 @@
-# Safe-datastore-getting-started-dotnet
+# SAFE-DataStore
 
-This repository contains source code for the SAFE.DataStore library (netcore 3.0, C# 8.0).
+This repository contains source code for the SAFE.DataStore library (netcore 2.2, C# 7.3).
 
 |SAFE.DataStore |
 |:-:|:-:|
-|[![Build Status](https://dev.azure.com/oetyng/datastore/build/status/SAFE-DataStore-CI)](https://dev.azure.com/oetyng/datastore/_build/latest?definitionId=6)|
+|[![Build Status](https://dev.azure.com/oetyng/SAFE/_apis/build/status/SAFE.DataStore-netcore(.NET%20Framework)-CI?branchName=master)](https://dev.azure.com/oetyng/SAFE/_build/latest?definitionId=3&branchName=master)|
 
-## DataStore (netcore 3.0)
+## DataStore (netcore 2.2)
 
 ### Features 
 
@@ -27,14 +27,14 @@ Not yet included:
 
 ### Prerequisites
 
-- Visual Studio 2019 with dotnet core development workload
+- Visual Studio 2017 with dotnet core development workload
 
 ### Supported Platforms
 
 - Windows (x64)
 
 ### Required SDK/Tools
-- netcore 3.0 SDK
+- netcore 2.2 SDK
 
 ## Further Help
 
