@@ -62,7 +62,7 @@ namespace SAFE.DataStore.Tests
             Assert.AreEqual(theData, findResult.Value);
         }
 
-        [TestMethod]
+        // [TestMethod] Quite long running, so do not include in automatic test suite.
         public async Task DatabaseTests_adds_more_than_md_capacity()
         {
             // Arrange

@@ -6,7 +6,7 @@ using Newtonsoft.Json.Serialization;
 
 namespace SAFE.DataStore
 {
-    internal static class Serializer
+    public static class Serializer
     {
         static JsonSerializerSettings _serializerSettings;
 

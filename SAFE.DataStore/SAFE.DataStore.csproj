@@ -1,10 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <DefineConstants>TRACE;SAFE_APP_MOCK</DefineConstants>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>8.0</LangVersion>
+    <!--<LangVersion>8.0</LangVersion>-->
+    <LangVersion>latest</LangVersion>
     <PackageTags>maidsafe safenetwork oetyng database decentralised decentralized</PackageTags>
     <Description>Database on SAFENetwork (Safe Access For Everyone) - a decentralized, secure and anonymous data storage network.</Description>
     <Authors>oetyng</Authors>

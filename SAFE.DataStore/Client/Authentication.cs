@@ -18,7 +18,8 @@ namespace SAFE.DataStore.Client.Auth
 
         public Task<Result<Session>> MockAuthenticationAsync(Credentials credentials)
         {
-            credentials ??= new Credentials(AuthHelpers.GetRandomString(10), AuthHelpers.GetRandomString(10));
+            // credentials ??= new Credentials(AuthHelpers.GetRandomString(10), AuthHelpers.GetRandomString(10));
+            credentials = credentials ?? new Credentials(AuthHelpers.GetRandomString(10), AuthHelpers.GetRandomString(10));
 
             var authReq = new AuthReq
             {
