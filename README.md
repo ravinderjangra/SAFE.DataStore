@@ -2,7 +2,7 @@
 
 This repository contains source code for the SAFE.DataStore library (netcore 2.2, C# 7.3).
 
-[![Build Status](https://dev.azure.com/oetyng/SAFE/_apis/build/status/SAFE.DataStore-netcore(.NET%20Framework)-CI?branchName=master)](https://dev.azure.com/oetyng/SAFE/_build/latest?definitionId=3&branchName=master)|
+[![Build Status](https://dev.azure.com/oetyng/SAFE/_apis/build/status/SAFE.DataStore-netcore(.NET%20Framework)-CI?branchName=master)](https://dev.azure.com/oetyng/SAFE/_build/latest?definitionId=3&branchName=master)
 
 ## DataStore (netcore 2.2)
 
