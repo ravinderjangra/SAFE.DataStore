@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <DefineConstants>TRACE;SAFE_APP_MOCK</DefineConstants>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <!--<LangVersion>8.0</LangVersion>-->
     <LangVersion>latest</LangVersion>
     <IsPackable>false</IsPackable>

@@ -72,6 +72,9 @@ namespace SAFE.DataStore.Client.Auth
                 key = mainKey.OpenSubKey(appUrl, true);
             }
 
+            if (appPath.EndsWith(".dll"))
+                appPath = appPath.Replace(".dll", ".exe");
+
             // if the protocol is not registered yet...we register it
             if (key == null)
             {

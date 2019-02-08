@@ -75,7 +75,12 @@ namespace SAFE.DataStore.Client.Auth
                 Console.WriteLine("Requesting authentication from Safe browser");
                 var encodedReq = await AuthHelpers.GenerateEncodedAppRequestAsync(_appInfo);
                 var url = AuthHelpers.UrlFormat(_appInfo, encodedReq.Item2, true);
-                System.Diagnostics.Process.Start(url);
+                var info = new System.Diagnostics.ProcessStartInfo
+                {
+                    UseShellExecute = true, // not default in netcore, so needs to be set
+                    FileName = url
+                };
+                System.Diagnostics.Process.Start(info);
             }
             catch (Exception ex)
             {
