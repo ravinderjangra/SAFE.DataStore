@@ -2,10 +2,19 @@
 {
     public class Pointer
     {
-        public MdLocator MdLocator { get; set; } // The address of the Md this points at.
+        /// <summary>
+        ///  The address of the Md this points at.
+        /// </summary>
+        public MdLocator MdLocator { get; set; }
 
-        public string MdKey { get; set; } // The key under which the value is stored in that Md.
+        /// <summary>
+        /// The key under which the value is stored in that Md.
+        /// </summary>
+        public string MdKey { get; set; }
 
-        public string ValueType { get; set; } // The type of the value stored.
+        /// <summary>
+        /// The type of the value stored.
+        /// </summary>
+        public string ValueType { get; set; }
     }
 }

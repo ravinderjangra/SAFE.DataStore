@@ -6,9 +6,9 @@ namespace SAFE.DataStore
 {
     internal class DataTree : IDataTree
     {
+        readonly Func<MdLocator, Task> _onHeadAddressChange;
         IMdNode _head;
         IMdNode _currentLeaf;
-        Func<MdLocator, Task> _onHeadAddressChange;
 
         public MdLocator MdLocator => _head.MdLocator;
 

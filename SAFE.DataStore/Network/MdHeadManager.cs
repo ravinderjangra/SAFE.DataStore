@@ -9,20 +9,18 @@ namespace SAFE.DataStore.Network
 {
     internal class MdHeadManager
     {
-        #pragma warning disable SA1310 // Field names should not contain underscore
         static readonly string MD_CONTAINER_KEY = "md_container";
         static readonly List<byte> MD_CONTAINER_KEY_BYTES = MD_CONTAINER_KEY.ToUtfBytes();
 
         #pragma warning disable SA1306 // Field names should begin with lower-case letter
         readonly string APP_CONTAINER_PATH;
         #pragma warning restore SA1306 // Field names should begin with lower-case letter
-        #pragma warning restore SA1310 // Field names should not contain underscore
 
         readonly ulong _protocol;
+        readonly NetworkDataOps _dataOps;
 
         MdContainer _mdContainer;
         ulong _mdContainerVersion;
-        NetworkDataOps _dataOps;
 
         public MdHeadManager(Session session, string appId, ulong protocol)
         {

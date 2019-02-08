@@ -2,7 +2,6 @@
 {
     internal static class ErrorCodes
     {
-        #pragma warning disable SA1310 // Field names should not contain underscore
         public const int KEY_NOT_FOUND = -1;
         public const int VALUE_DELETED = -2;
         public const int VALUE_ALREADY_EXISTS = -3;
@@ -13,6 +12,5 @@
         public const int MULTIPLE_RESULTS = -8;
         public const int INVALID_OPERATION = -9;
         public const int DATA_NOT_FOUND = -10;
-        #pragma warning restore SA1310 // Field names should not contain underscore
     }
 }

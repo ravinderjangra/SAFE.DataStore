@@ -6,7 +6,7 @@ namespace SAFE.DataStore
 {
     internal class TypeStore : ITypeStore
     {
-        IDataTree _dataTree;
+        readonly IDataTree _dataTree;
 
         public TypeStore(IDataTree dataTree)
         {

@@ -14,11 +14,11 @@ namespace App
         {
             try
             {
-                PipeSecurity ps = new PipeSecurity();
-                PipeAccessRule psRule = new PipeAccessRule(@"Everyone", PipeAccessRights.ReadWrite, System.Security.AccessControl.AccessControlType.Allow);
+                var ps = new PipeSecurity();
+                var psRule = new PipeAccessRule(@"Everyone", PipeAccessRights.ReadWrite, System.Security.AccessControl.AccessControlType.Allow);
                 ps.AddAccessRule(psRule);
 
-                using (NamedPipeServerStream namedPipeServer =
+                using (var namedPipeServer =
                     new NamedPipeServerStream("test-pipe", PipeDirection.InOut, 1, PipeTransmissionMode.Message, PipeOptions.Asynchronous, 1, 1))
                 {
                     namedPipeServer.SetAccessControl(ps);
@@ -46,7 +46,7 @@ namespace App
         {
             try
             {
-                using (NamedPipeClientStream namedPipeClient = new NamedPipeClientStream("test-pipe"))
+                using (var namedPipeClient = new NamedPipeClientStream("test-pipe"))
                 {
                     namedPipeClient.Connect();
 

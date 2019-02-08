@@ -5,8 +5,8 @@ namespace SAFE.DataStore.Client
 {
     public class ClientFactory
     {
-        string _appId;
-        Authentication _authentication;
+        readonly string _appId;
+        readonly Authentication _authentication;
 
         public ClientFactory(AppInfo appInfo)
         {

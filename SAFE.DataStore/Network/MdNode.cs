@@ -10,10 +10,8 @@ namespace SAFE.DataStore.Network
 {
     internal sealed class MdNode : IMdNode
     {
-        #pragma warning disable SA1310 // Field names should not contain underscore
         static readonly string METADATA_KEY = 0.ToString();
         /* static readonly List<byte> METADATA_KEY_BYTES = METADATA_KEY.ToUtfBytes(); */
-        #pragma warning restore SA1310 // Field names should not contain underscore
 
         readonly MDataInfo _mdInfo;
         readonly MdDataOps _dataOps;
@@ -382,7 +380,7 @@ namespace SAFE.DataStore.Network
         // 0+ means a specific version is expected.
         public async Task<Result<Pointer>> SetAsync(string key, StoredValue value, long expectedVersion = -2)
         {
-            ulong version = 0;
+            ulong version;
 
             try
             {

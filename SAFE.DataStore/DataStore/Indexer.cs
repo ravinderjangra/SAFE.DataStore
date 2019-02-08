@@ -10,11 +10,10 @@ namespace SAFE.DataStore
     {
         ConcurrentDictionary<string, string[]> _paths = new ConcurrentDictionary<string, string[]>();
 
-        #pragma warning disable SA1502 // Element should not be on a single line
-        Indexer(/*IMdNode info, */ITypeStore typeStore)
-            : base(/*info, */typeStore, new InactiveIndexer())
-        { }
-        #pragma warning restore SA1502 // Element should not be on a single line
+        Indexer(ITypeStore typeStore)
+            : base(typeStore, new InactiveIndexer())
+        {
+        }
 
         public static async Task<Indexer> GetOrAddAsync(MdHead mdHead)
         {

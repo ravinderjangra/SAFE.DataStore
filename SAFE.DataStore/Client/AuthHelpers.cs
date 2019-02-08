@@ -62,10 +62,6 @@ namespace SAFE.DataStore.Client.Auth
             string appUrl = "safe-" + Convert.ToBase64String(appInfo.Id.ToUtfBytes().ToArray())
                 .TrimEnd(padding).Replace('+', '-').Replace('/', '_');
 
-#if NETCOREAPP3_0
-            appPath = appPath.Replace("dll", "exe");
-#endif
-
             var key = mainKey?.OpenSubKey(appUrl, true);
 
             // because two apps are using same registry key so

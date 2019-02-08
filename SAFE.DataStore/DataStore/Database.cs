@@ -11,7 +11,6 @@ namespace SAFE.DataStore
 {
     internal class Database : IDatabase
     {
-        // readonly IMdNode _info;
         readonly ITypeStore _typeInfo;
         readonly IIndexer _indexer;
 
@@ -20,9 +19,8 @@ namespace SAFE.DataStore
         protected Dictionary<string, MdLocator> _dataTreeAddresses = new Dictionary<string, MdLocator>();
 #pragma warning restore SA1401 // Fields should be private
 
-        protected Database(/*IMdNode info, */ITypeStore typeInfo, IIndexer indexer)
+        protected Database(ITypeStore typeInfo, IIndexer indexer)
         {
-            // _info = info;
             _typeInfo = typeInfo;
             _indexer = indexer;
         }

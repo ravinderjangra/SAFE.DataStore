@@ -50,7 +50,7 @@ namespace SAFE.DataStore.Tests
             var db = await GetDatabase("theDb");
             var theKey = "theKey";
             var theData = 42;
-            var addResult = await db.AddAsync(theKey, theData).ConfigureAwait(false);
+            _ = await db.AddAsync(theKey, theData).ConfigureAwait(false);
 
             // Act
             var findResult = await db.FindByKeyAsync<int>(theKey).ConfigureAwait(false);

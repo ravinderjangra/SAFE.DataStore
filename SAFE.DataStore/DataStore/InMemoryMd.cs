@@ -10,12 +10,10 @@ namespace SAFE.DataStore
     // with connections via Maidsafe's SafeApp library.
     internal class InMemoryMd : IMdNode
     {
-        static Dictionary<string, IMdNode> _allMds = new Dictionary<string, IMdNode>();
-
-        Dictionary<string, StoredValue> _valueFields = new Dictionary<string, StoredValue>();
-        Dictionary<int, Pointer> _pointerFields = new Dictionary<int, Pointer>();
-
-        Random _rand = new Random();
+        static readonly Dictionary<string, IMdNode> _allMds = new Dictionary<string, IMdNode>();
+        readonly Dictionary<string, StoredValue> _valueFields = new Dictionary<string, StoredValue>();
+        readonly Dictionary<int, Pointer> _pointerFields = new Dictionary<int, Pointer>();
+        readonly Random _rand = new Random();
 
         public int Level { get; set; }
 

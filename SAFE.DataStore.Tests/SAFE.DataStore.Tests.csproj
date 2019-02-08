@@ -16,9 +16,6 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\SAFE.DataStore\SAFE.DataStore.csproj" />
   </ItemGroup>
   
@@ -27,7 +24,5 @@
       <HintPath>..\..\..\..\.nuget\packages\maidsafe.safeapp\0.2.0\build\netcoreapp1.0\SafeApp.MockAuthBindings.dll</HintPath>
     </Reference>
   </ItemGroup>
-
-  <Import Project="$(MSBuildThisFileDirectory)..\CodeStyles.targets" />
 
 </Project>

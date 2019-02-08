@@ -4,10 +4,10 @@ namespace SAFE.DataStore
 {
     internal class StoredValue
     {
-#pragma warning disable SA1502 // Element should not be on a single line
         [JsonConstructor]
-        StoredValue() { }
-#pragma warning restore SA1502 // Element should not be on a single line
+        StoredValue()
+        {
+        }
 
         public StoredValue(object data)
         {

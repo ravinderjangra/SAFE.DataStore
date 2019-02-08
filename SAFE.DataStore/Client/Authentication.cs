@@ -53,14 +53,12 @@ namespace SAFE.DataStore.Client.Auth
 
             var (_, reqMsg) = await Session.EncodeAuthReqAsync(authReq);
             var ipcReq = await authenticator.DecodeIpcMessageAsync(reqMsg);
-            var authIpcReq = ipcReq as AuthIpcReq;
-            if (authIpcReq == null)
+            if (!(ipcReq is AuthIpcReq authIpcReq))
                 return new InvalidOperation<Session>($"Could not get {nameof(AuthIpcReq)}");
 
             var resMsg = await authenticator.EncodeAuthRespAsync(authIpcReq, true);
             var ipcResponse = await Session.DecodeIpcMessageAsync(resMsg);
-            var authResponse = ipcResponse as AuthIpcMsg;
-            if (authResponse == null)
+            if (!(ipcResponse is AuthIpcMsg authResponse))
                 return new InvalidOperation<Session>($"Could not get {nameof(AuthIpcMsg)}");
 
             authenticator.Dispose();
@@ -102,7 +100,6 @@ namespace SAFE.DataStore.Client.Auth
                     {
                         // Initialise a new session
                         var session = await Session.AppRegisteredAsync(_appInfo.Id, ipcMsg.AuthGranted);
-
                         return session;
                     }
                     else

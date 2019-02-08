@@ -8,7 +8,7 @@ namespace SAFE.DataStore
 {
     public static class Serializer
     {
-        static JsonSerializerSettings _serializerSettings;
+        static readonly JsonSerializerSettings _serializerSettings;
 
         static Serializer()
         {
@@ -75,7 +75,7 @@ namespace SAFE.DataStore
             catch
             {
                 // _logger.Error(ex, "Error in {0} when handling msg.", ..);
-                result = default(T);
+                result = default;
                 return false;
             }
         }
@@ -100,7 +100,7 @@ namespace SAFE.DataStore
             catch
             {
                 // _logger.Error(ex, "Error in {0} when handling msg.", ..);
-                result = default(T);
+                result = default;
                 return false;
             }
         }

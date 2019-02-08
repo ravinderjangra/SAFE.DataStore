@@ -4,10 +4,10 @@ namespace SAFE.DataStore
 {
     public class MdLocator
     {
-#pragma warning disable SA1502 // Element should not be on a single line
         [JsonConstructor]
-        MdLocator() { }
-#pragma warning restore SA1502 // Element should not be on a single line
+        MdLocator()
+        {
+        }
 
         public MdLocator(byte[] xorName, ulong typeTag, byte[] secEncKey, byte[] nonce)
         {

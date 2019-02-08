@@ -90,7 +90,7 @@ namespace SAFE.DataStore.Data
 
             for (var i = 0; i < bytes.Length; i++)
             {
-                hash = hash ^ bytes[i];
+                hash ^= bytes[i];
                 hash *= fnv64Prime;
             }
 

@@ -4,9 +4,7 @@ namespace SAFE.DataStore.Factories
 {
     internal class TypeStoreFactory
     {
-        #pragma warning disable SA1310 // Field names should not contain underscore
         public const string TYPE_STORE_HEAD_KEY = "TYPE_STORE_HEAD";
-        #pragma warning restore SA1310 // Field names should not contain underscore
 
         public static async Task<ITypeStore> GetOrAddTypeStoreAsync(IMdNode dbInfoMd)
         {
