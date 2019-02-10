@@ -125,11 +125,12 @@ namespace SAFE.DataStore.Network
             var mdKeyCipherBytes = await _dataOps.Session.MDataInfoActions.EncryptEntryKeyAsync(appContainerInfo, MD_CONTAINER_KEY_BYTES);
             var cipherTxtEntryVal = await _dataOps.Session.MData.GetValueAsync(appContainerInfo, mdKeyCipherBytes);
 
+            _mdContainerVersion = cipherTxtEntryVal.Item2;
+
             var plainTxtEntryVal = await _dataOps.Session.MDataInfoActions.DecryptAsync(appContainerInfo, cipherTxtEntryVal.Item1);
             var mdContainerJson = plainTxtEntryVal.ToUtfString();
-            var mdContainer = mdContainerJson.Parse<MdContainer>();
-            _mdContainer = mdContainer;
-            return mdContainer;
+            _mdContainer = mdContainerJson.Parse<MdContainer>();
+            return _mdContainer;
         }
 
         class MdContainer

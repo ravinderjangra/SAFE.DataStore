@@ -44,8 +44,8 @@ namespace SAFE.DataStore.Client
                         client.SendFrame(args[1]);
                         var ack = client.ReceiveFrameString();
                         Console.WriteLine(ack);
-                        Console.WriteLine($"Exiting..");
-                        Thread.Sleep(3000); // allow a short moment to percieve the above writelines
+                        Console.WriteLine($"Switch back to your application..");
+                        Thread.Sleep(1000); // allow a short moment to percieve the above writelines
                     }
                 }
 
