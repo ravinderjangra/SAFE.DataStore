@@ -13,7 +13,7 @@
     <Copyright>2019 oetyng</Copyright>
     <RepositoryUrl>https://github.com/oetyng/SAFE.DataStore</RepositoryUrl>
     <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
-    <Version>0.2.0</Version>
+    <Version>0.3.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
