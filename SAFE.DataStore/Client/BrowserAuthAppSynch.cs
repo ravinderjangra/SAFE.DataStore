@@ -22,7 +22,7 @@ namespace SAFE.DataStore.Client
         Mutex _mutex;
         bool _firstApplicationInstance;
 
-        public async Task RunAsync(string[] args, AppInfo appInfo, Func<Task> whenFirstInstance)
+        public async Task RunAsync(string[] args, AppInfo appInfo, Func<AppInfo, Task> whenFirstInstance)
         {
             if (IsApplicationFirstInstance(appInfo.Name))
             {
@@ -30,7 +30,7 @@ namespace SAFE.DataStore.Client
                 // update system registry
                 AuthConfig.WinDesktopUseBrowserAuth(appInfo, args[0]);
 
-                await whenFirstInstance();
+                await whenFirstInstance(appInfo);
             }
             else
             {
